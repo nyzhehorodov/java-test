@@ -1,0 +1,10 @@
+namespace: java-test
+java-test:
+  defines: runnable
+  metadata:
+    name: java-test
+    description: A basic Java Spring Boot application
+    icon: https://emojiapi.dev/api/v1/globe_with_meridians.svg
+  containers:
+    java-test:
+      build: .
