@@ -8,6 +8,7 @@ sample:
   containers:
     sample:
       build: .
+      dockerfile: Dockerfile
   variables:
     java-version:
       env: JAVA_VERSION
