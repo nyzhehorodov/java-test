@@ -4,13 +4,8 @@ sample:
   metadata:
     name: sample
     description: Sample Java Application
-    icon: https://emojiapi.dev/api/v1/bookmark.svg
+    icon: https://emojiapi.dev/api/v1/robot.svg
   containers:
     sample:
       build: .
-  variables:
-    java-version:
-      env: JAVA_VERSION
-      type: string
-      description: Java version used in the project
-      value: '1.8'
+      dockerfile: Dockerfile
