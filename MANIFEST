@@ -1,2 +1,2 @@
-REPO sample
-LOAD sample.yaml
+REPO sample-java-application
+LOAD sample-java-application.yaml

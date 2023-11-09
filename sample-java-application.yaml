@@ -1,0 +1,13 @@
+namespace: sample-java-application
+sample-java-application:
+  defines: runnable
+  metadata:
+    name: sample-java-application
+    description: >-
+      A Spring Boot Java application with Thymeleaf for templating and a web
+      server.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    sample-java-application:
+      build: .
+      image: env-1548.registry.local/sample-java-application:test-d4b87d7
