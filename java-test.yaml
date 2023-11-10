@@ -1,0 +1,20 @@
+namespace: java-test
+java-test:
+  defines: runnable
+  metadata:
+    name: java-test
+    description: A simple Java application using Spring Boot
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    java-test:
+      build: .
+      image: env-1552.registry.local/java-test:main-2faf220
+      dockerfile: Dockerfile
+  services:
+    8080-tcp:
+      container: java-test
+      port: 8080
+      host-port: 8080
+      publish: false
+      protocol: TCP
+      description: Default Spring Boot port
