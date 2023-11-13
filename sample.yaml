@@ -1,0 +1,20 @@
+namespace: sample
+sample:
+  defines: runnable
+  metadata:
+    name: sample
+    description: Sample Java Application
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    sample:
+      build: .
+      image: env-1849.registry.local/sample:main-2faf220
+      dockerfile: Dockerfile
+  services:
+    8080-tcp:
+      container: sample
+      port: 8080
+      host-port: 8080
+      publish: false
+      protocol: TCP
+      description: Application's main port
