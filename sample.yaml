@@ -1,5 +1,5 @@
 namespace: sample
-sample3:
+sample4:
   defines: runnable
   metadata:
     name: sample
