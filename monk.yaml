@@ -1,0 +1,28 @@
+namespace: java-test
+
+sample:
+  defines: runnable
+  metadata:
+    name: sample
+    description: Sample Java Spring Boot application that serves both frontend and backend
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    sample:
+      image: env-2261.registry.local/sample:main-d87b3fa
+      build: .
+      dockerfile: Dockerfile.sample
+  services:
+    http-server:
+      description: HTTP server listening port.
+      container: sample
+      port: 8080
+      host-port: 8080
+      publish: true
+      protocol: tcp
+  connections: {}
+  variables: {}
+
+stack:
+  defines: group
+  members:
+    - java-test/sample
