@@ -1,0 +1,21 @@
+namespace: java-test
+
+sample-application:
+  defines: runnable
+  metadata:
+    name: sample-application
+    description: Sample Java Spring Boot application.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    sample-application:
+      image: env-2645.registry.local/sample-application:main-d87b3fa
+      build: .
+      dockerfile: Dockerfile.sample-application
+  services: {}
+  connections: {}
+  variables: {}
+
+stack:
+  defines: group
+  members:
+    - java-test/sample-application
