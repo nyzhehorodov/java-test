@@ -1,0 +1,19 @@
+namespace: sample
+sample2:
+  defines: runnable
+  metadata:
+    name: sample
+    description: Sample Java Application
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    sample:
+      build: .
+      image: env-1898.registry.local/sample:main-9f9b1cd
+  services:
+    spring-boot:
+      container: sample
+      port: 8080
+      host-port: 8080
+      publish: false
+      protocol: TCP
+      description: Primary application port
